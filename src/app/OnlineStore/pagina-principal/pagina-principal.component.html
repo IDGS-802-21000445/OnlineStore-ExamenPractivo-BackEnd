@@ -1,0 +1,23 @@
+<div class="pagina-principal">
+
+  <div class="banner">
+    <img src="../../../assets/images/banner.jpg" alt="Banner">
+  </div>
+
+  <h2>Productos destacados</h2>
+  <div class="productos-destacados">
+    <div *ngFor="let producto of productosDestacados" class="producto">
+      <img [src]="getNombreImagenDesdeRuta(producto.urlImagen)" alt="{{ producto.nombreProducto }}">
+      <h3>{{ producto.nombreProducto }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <p>Precio: {{ producto.precio | currency }}</p>
+    </div>
+  </div>
+
+  <div class="informacion-contacto">
+    <h2>Información de contacto</h2>
+    <p>{{ informacionContacto.direccion }}</p>
+    <p>{{ informacionContacto.telefono }}</p>
+    <p>{{ informacionContacto.email }}</p>
+  </div>
+</div>

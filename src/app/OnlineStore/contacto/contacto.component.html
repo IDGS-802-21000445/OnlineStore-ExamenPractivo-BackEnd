@@ -1,0 +1,35 @@
+<div class="contacto">
+  <h1>Contacto</h1>
+
+  <div class="contenido-contacto">
+    <div class="formulario-contacto">
+      <h2>Envíanos tus comentarios</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="informacion-oficina">
+      <h2>Información de contacto</h2>
+      <p>Dirección: {{ datosContacto.direccion }}</p>
+      <p>Teléfono: {{ datosContacto.telefono }}</p>
+      <p>Atención a Cliente: {{ datosContacto.atencionCliente }}</p>
+      <p>Email: {{ datosContacto.email }}</p>
+    </div>
+  </div>
+</div>

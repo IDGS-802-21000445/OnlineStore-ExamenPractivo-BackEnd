@@ -1,0 +1,82 @@
+.contacto {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contacto h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contenido-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formulario-contacto, .informacion-oficina {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2, .informacion-oficina h2 {
+  margin-bottom: 15px;
+  color: #0056b3;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.formulario-contacto textarea {
+  resize: vertical;
+}
+
+.formulario-contacto button {
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #004080;
+}
+
+.informacion-oficina p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .contenido-contacto {
+    flex-direction: column;
+  }
+}

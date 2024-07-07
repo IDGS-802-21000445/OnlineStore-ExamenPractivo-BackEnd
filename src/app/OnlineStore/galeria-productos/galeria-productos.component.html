@@ -1,0 +1,20 @@
+<div class="galeria-productos">
+  <h1>Catálogo de Productos</h1>
+
+  <div class="barra-busqueda">
+    <input type="text" placeholder="Buscar productos..." [(ngModel)]="filtroNombre">
+    <select [(ngModel)]="filtroCategoria">
+      <option value="">Todas las categorías</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre }}</option>
+    </select>
+  </div>
+
+  <div class="lista-productos">
+    <div *ngFor="let producto of getProductosFiltrados()" class="producto">
+      <img [src]="getNombreImagenDesdeRuta(producto.urlImagen)" alt="{{ producto.nombreProducto }}">
+      <h3>{{ producto.nombreProducto }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <p>Precio: {{ producto.precio | currency }}</p>
+    </div>
+  </div>
+</div>
